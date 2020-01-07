@@ -1,12 +1,12 @@
 #== Class: knot
 #
 define knot::zone (
-  Optional[Array[String]]       $masters                = [],
-  Optional[Array[String]]       $provide_xfrs           = [],
-  Optional[Array[String]]       $allow_notify_additions = [],
-  Optional[Array[String]]       $send_notify_additions  = [],
-  Optional[String]              $zonefile               = undef,
-  Optional[Tea::Absolutepath]   $zone_dir               = undef,
+  Optional[Array[String]]    $masters                = [],
+  Optional[Array[String]]    $provide_xfrs           = [],
+  Optional[Array[String]]    $allow_notify_additions = [],
+  Optional[Array[String]]    $send_notify_additions  = [],
+  Optional[String]           $zonefile               = undef,
+  Optional[Stdlib::Unixpath] $zone_dir               = undef,
 ) {
   include ::knot
   $default_masters      = $::knot::default_masters

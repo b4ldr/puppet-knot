@@ -6,9 +6,9 @@ define knot::file (
     String                       $group            = 'knot',
     Pattern[/^\d+$/]             $mode             = '0640',
     Optional[String]             $origin           = undef,
-    Optional[Tea::Puppetsource]  $source           = undef,
+    Optional[Stdlib::Filesource] $source           = undef,
     Optional[String]             $content          = undef,
-    Optional[Tea::Puppetcontent] $content_template = undef,
+    Optional[String[1]]          $content_template = undef,
 ) {
   include ::knot
   if $content and $content_template {

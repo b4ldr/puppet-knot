@@ -2,7 +2,7 @@
 #
 define knot::tsig (
   Knot::Algo       $algo     = 'hmac-sha256',
-  Tea::Base64      $data     = undef,
+  Knot::Base64     $data     = undef,
   Optional[String] $key_name = undef,
 ) {
   include ::knot

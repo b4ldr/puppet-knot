@@ -1,11 +1,11 @@
 #== Define: knot::remote
 #
 define knot::remote (
-  Optional[Variant[Tea::Ipv4, Tea::Ipv4_cidr]] $address4  = undef,
-  Optional[Variant[Tea::Ipv6, Tea::Ipv6_cidr]] $address6  = undef,
-  Optional[String]                             $tsig      = undef,
-  Optional[String]                             $tsig_name = undef,
-  Tea::Port                                    $port      = 53,
+  Optional[Stdlib::IP::Address::V4] $address4  = undef,
+  Optional[Stdlib::IP::Address::V4] $address6  = undef,
+  Optional[String]                  $tsig      = undef,
+  Optional[String]                  $tsig_name = undef,
+  Stdlib::Port                      $port      = 53,
 ) {
   include ::knot
   if ! $address4 and ! $address6 {
