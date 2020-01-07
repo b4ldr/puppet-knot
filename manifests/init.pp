@@ -147,7 +147,7 @@ class knot (
     group   => $username,
     require => Package[$package_name],
   }
-  if $::kernel == 'Linux' {
+  if $facts['os']['name'] == 'Ubuntu' {
     file{'/etc/init/knot.conf':
       ensure  => present,
       content => template('knot/etc/init/knot.conf.erb'),
