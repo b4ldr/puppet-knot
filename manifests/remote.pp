@@ -2,7 +2,7 @@
 #
 define knot::remote (
   Optional[Stdlib::IP::Address::V4] $address4  = undef,
-  Optional[Stdlib::IP::Address::V4] $address6  = undef,
+  Optional[Stdlib::IP::Address::V6] $address6  = undef,
   Optional[String]                  $tsig      = undef,
   Optional[String]                  $tsig_name = undef,
   Stdlib::Port                      $port      = 53,
