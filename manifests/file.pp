@@ -4,7 +4,7 @@ define knot::file (
     String                       $ensure           = 'present',
     String                       $owner            = 'knot',
     String                       $group            = 'knot',
-    Pattern[/^\d+$/]             $mode             = '0640',
+    Pattern[/^\d+$/]             $mode             = '0660',
     Optional[String]             $origin           = undef,
     Optional[Stdlib::Filesource] $source           = undef,
     Optional[String]             $content          = undef,
